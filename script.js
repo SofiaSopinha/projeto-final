@@ -11,14 +11,26 @@ function cadastrarProduto(){
 
 function DelporID(){
     const idProcurado = prompt("Qual é o id do produto que você quer remover?")
-    const Indexitem = mercadoria.findIndex(a => a.id == idProcurado)
+    const Indexproduto = mercadoria.findIndex(a => a.id == idProcurado)
 
-    if (Indexitem != -1){
-        alunos.splice(Indexitem, 1)
-        alert("Item removido com sucesso")
+    if (Indexproduto != -1){
+        alunos.splice(Indexproduto, 1)
+        alert("Produto removido com sucesso")
     } else{
-        alert("Item não encontrado.")
+        alert("Produto não encontrado.")
     }
 }
 
-function {}
+function mostrarProdutos(){
+    if (mercadoria.length > 0) {
+        for (let i = 0; i < mercadoria.length; i++) {
+            alert(`=== PRODUTOS ===\n
+                id: ${mercadorias[i].id}\n
+                nome: ${mercadorias[i].nome}\n
+                marca: ${mercadorias[i].marca}\n
+                ===============================\n`) }
+    } else{
+        alert("Nenhum produto cadastrado")
+    }
+    
+}
