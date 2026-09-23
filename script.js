@@ -3,12 +3,12 @@ const mercadoria = []
 function cadastrarProduto(){
     const nome = prompt("Insira o nome do produto")
     if(nome === null || nome === ""){
-        alert("O produto não pôde ser cadastrado. O nome do produto é obrigatório")
+        alert("O produto não pôde ser cadastrado. O nome do produto é obrigatório.")
         return}
 
     const marca = prompt("Insira a marca do produto")
     if(marca === null || marca === ""){
-        alert("O produto não pôde ser cadastrado. A marca do produto é obrigatório")
+        alert("O produto não pôde ser cadastrado. A marca do produto é obrigatório.")
         return
     }
     
@@ -29,7 +29,7 @@ function DelporID(){
 
     if (Indexproduto != -1){
         mercadoria.splice(Indexproduto, 1)
-        alert("Produto removido com sucesso")
+        alert("Produto removido com sucesso.")
     } else{
         alert("Produto não encontrado.")
     }
@@ -47,7 +47,7 @@ function mostrarProdutos(){
         }
         alert(produtos)
     } else{
-        alert("Nenhum produto cadastrado")
+        alert("Nenhum produto cadastrado.")
     }   
 }
 
@@ -55,7 +55,7 @@ function buscarNome(){
 
     const nomeProcurado = prompt("Digite o nome do produto que você está procurando: ")
     if(nomeProcurado === null || nomeProcurado === ""){
-        alert("O produto não pôde ser identificado. Por favor, insira um nome válido")
+        alert("O produto não pôde ser identificado. Por favor, insira um nome válido.")
         return
     }
     const nomeEncontrado = mercadoria.find(produto => produto.nome.toLowerCase().trim() === nomeProcurado.toLowerCase().trim())
@@ -71,4 +71,20 @@ function buscarNome(){
     }
 }
 
+function removerUltimo() {
+    mercadoria.pop()
+    alert("Último produto removido com sucesso.")
+}
+
+function removerTudo(){
+    const confirmado = confirm("Você tem certeza de quer remover todos os produtos? Não é possível desfazer essa ação.")
+
+    if(confirmado == true){
+        alert("Todos os produtos removidos com sucesso.")
+    }
+    else{
+        alert("Ação cancelada.")
+    }
+    
+}
 
