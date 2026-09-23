@@ -50,3 +50,25 @@ function mostrarProdutos(){
         alert("Nenhum produto cadastrado")
     }   
 }
+
+function buscarNome(){
+
+    const nomeProcurado = prompt("Digite o nome do produto que você está procurando: ")
+    if(nomeProcurado === null || nomeProcurado === ""){
+        alert("O produto não pôde ser identificado. Por favor, insira um nome válido")
+        return
+    }
+    const nomeEncontrado = mercadoria.find(produto => produto.nome.toLowerCase().trim() === nomeProcurado.toLowerCase().trim())
+
+    if(nomeEncontrado){
+        alert(`Produto identificado: \n
+            id: ${nomeEncontrado.id}\n
+            nome: ${nomeEncontrado.nome}\n
+            marca: ${nomeEncontrado.marca}`)
+    }
+    else{
+        alert("Produto não encontrado.")
+    }
+}
+
+
