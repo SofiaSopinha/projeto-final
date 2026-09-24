@@ -1,0 +1,57 @@
+/* Estilo base do botão (ajuste cores e tamanhos para o seu design) */
+.btn-estoque {
+  width: 300px;
+  height: 50px;
+  background-color: #544c4c; /* Cor aproximada dos botões da sua imagem */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px; /* Caso queira bordas levemente arredondadas */
+  cursor: pointer;
+  
+  /* Essencial para o efeito funcionar: */
+  position: relative; 
+  overflow: hidden; /* Esconde o texto que "sair" do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Configuração inicial dos textos */
+.btn-estoque .titulo,
+.btn-estoque .descricao {
+  position: absolute;
+  transition: all 0.4s ease; /* Cria a animação suave */
+  text-align: center;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* O título começa visível e no centro */
+.btn-estoque .titulo {
+  opacity: 1;
+  transform: translateY(0);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* A descrição começa invisível e deslocada para baixo */
+.btn-estoque .descricao {
+  opacity: 0;
+  transform: translateY(20px);
+  font-size: 13px; /* Fonte menor para caber textos maiores */
+}
+
+/* --- O QUE ACONTECE NO HOVER --- */
+
+/* Título sobe e fica transparente */
+.btn-estoque:hover .titulo {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Descrição sobe para o centro e fica visível */
+.btn-estoque:hover .descricao {
+  opacity: 1;
+  transform: translateY(0);
+}

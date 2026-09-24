@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projeto final</title>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <!-- IMPORTANTE!!!!!!!!!
  caso se não entenda como organizei tem a ilustração completa no figma e esta organizada exatamente como esta aqui  tals-->
@@ -16,7 +16,11 @@
 </div>
  
 <div class="interacao">
-    <button onclick="cadastrarProduto()">Cadastrar</button>
+  <button class="btn-estoque" onclick="cadastrarProduto()">
+  <span class="titulo">Cadastro</span>
+  <span class="descricao">Cadastre um novo produto para venda</span>
+  </button>
+
     <button onclick="DelporID()">excluir p/id</button>
     <button onclick="mostrarProdutos()">exibir produtos</button>
     <button onclick="buscarNome()">buscar item</button>
