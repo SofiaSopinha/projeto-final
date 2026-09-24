@@ -7,13 +7,13 @@
     margin: 30px 10px 5px 150px;
 }
 
-.btn-diagonal1{transform: translateX(0px);}
-.btn-diagonal2{transform: translateX(40px);}
-.btn-diagonal3{transform: translateX(80px);}
-.btn-diagonal4{transform: translateX(120px);}
-.btn-diagonal5{transform: translateX(160px);}
-.btn-diagonal6{transform: translateX(200px);}
-.btn-diagonal7{transform: translateX(240px);}
+.btn-estoque1{transform: translateX(0px);}
+.btn-estoque2{transform: translateX(40px);}
+.btn-estoque3{transform: translateX(80px);}
+.btn-estoque4{transform: translateX(120px);}
+.btn-estoque5{transform: translateX(160px);}
+.btn-estoque6{transform: translateX(200px);}
+.btn-estoque7{transform: translateX(240px);}
 
 .cabecalho_subtitulo{
     display: flex;
