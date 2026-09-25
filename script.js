@@ -99,3 +99,33 @@ function qtdProdutos(){
     const total = mercadoria.length
     alert(`Há ${total} produtos cadastrados no total`)
 }
+
+function editarProduto(){
+    if(mercadoria.length == 0){
+        alert("Não há produtos para editar")
+        return
+    }
+
+    const idprocurado = prompt("Qual é o id do produto que você quer editar?")
+    const Indexproduto = mercadoria.findIndex(a => a.id == idprocurado)
+
+    if (Indexproduto != -1){
+        const novoNome = prompt ("Insira o novo nome do produto:")
+        if(novoNome === null || novoNome.trim() === ""){
+            alert("O produto não pôde ser editado, o nome é obrigatório")
+            return
+        }
+
+        const novaMarca = prompt("Insira a nova marca do produto:")
+        if(novaMarca === null || novaMarca.trim() === ""){
+            alert("O produto não pôde ser editado, a marca é obrigatória")
+            return
+        }
+
+        mercadoria[Indexproduto].nome = novoNome
+        mercadoria[Indexproduto].marca = novaMarca
+        alert("Produto editado com sucesso!")
+    }else{
+        alert("Produto não encontrado")
+    }
+}
