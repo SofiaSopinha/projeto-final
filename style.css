@@ -38,6 +38,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px 30px;
+    padding-bottom: 100px;
     position: relative;
     background:
         linear-gradient(
@@ -60,6 +61,13 @@ body {
 
 }
 
+.logo{
+    width: 35vh;
+    margin-top: -35px;
+    margin-bottom: -15px;
+    transform: translateX(var(--posicaoimg));
+    --posicaoimg:180px
+}
 
 /* =========================
    BOTÕES
@@ -154,6 +162,9 @@ body {
 
 .botoes .btn-estoque:nth-child(9) {
     --posicao: 320px;}
+
+.botoes .btn-estoque:nth-child(10) {
+    --posicao: 360px;}
 /* título */
 
 .btn-estoque {
@@ -248,6 +259,10 @@ body {
     position: relative;
 }
 
+.descricao1 img{
+    width: 400px;
+    height: 400px;
+}
 
 /* =========================
    CABEÇALHO
@@ -309,6 +324,10 @@ body {
     width: 80%;
     margin: 100px auto 0;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .descricao1 p {
