@@ -73,6 +73,29 @@ function buscarNome(){
     }
 }
 
+function buscarMarca(){
+    const marcaProcurada = prompt("Digite a marca do produto que você está procurando: ")
+    if(marcaProcurada === null || marcaProcurada.trim() === ""){
+        alert("O produto não pôde ser identificado. Por favor, insira um nome válido.")
+        return
+    }
+    const marcaEncontrada = mercadoria.filter(produto => produto.marca.toLowerCase().trim() === marcaProcurada.toLowerCase().trim())
+
+    if(marcaEncontrada.length > 0){
+        for (let i = 0; i < marcaEncontrada.length; i++) {
+            let produtos = `=== PRODUTOS ===\n`
+            produtos = produtos + `id: ${marcaEncontrada[i].id}\n`
+            produtos = produtos + `nome: ${marcaEncontrada[i].nome}\n` 
+            produtos = produtos + `marca: ${marcaEncontrada[i].marca}\n`
+            produtos = produtos + `===============================\n`
+        }
+        alert(produtos)
+    }
+    else{
+        alert("Produto não encontrado.")
+    }
+}
+
 function removerUltimo() {
     if(mercadoria.length > 0){
     mercadoria.pop()
@@ -129,3 +152,4 @@ function editarProduto(){
         alert("Produto não encontrado")
     }
 }
+

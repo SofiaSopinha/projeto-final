@@ -152,6 +152,8 @@ body {
 .botoes .btn-estoque:nth-child(8) {
     --posicao: 280px;}
 
+.botoes .btn-estoque:nth-child(9) {
+    --posicao: 320px;}
 /* título */
 
 .btn-estoque {
