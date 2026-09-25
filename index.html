@@ -10,66 +10,75 @@
 caso não entenda como organizar tem a ilustração completa no figma e esta organizada exatamente como esta aqui tals-->
 
 <body>
-<div class="cabecalho_subtitulo">
-<h1>título</h1>
-<h3>subtítulo;3</h3>
+  <div class="tela_principal">
 
+   <div class="gramado"></div>
 
-<div class="interacao">
-
-  <div class="botoes">
-
-    <button class="btn-estoque" onclick="cadastrarProduto()">
-      <span class="titulo">Cadastro</span>
-      <span class="descricao">Cadastre um novo produto para venda</span>
-    </button>
-    
-    <button class="btn-estoque"onclick="DelporID()">
-      <span class="titulo">Remover produto</span>
-      <span class="descricao">Remova um produto cadastrado pelo ID</span>
-    </button>
-
-    <button class="btn-estoque"onclick="mostrarProdutos()">
-      <span class="titulo">Listar</span>
-      <span class="descricao">Liste todos os produtos cadastrados</span>
-    </button>
-
-    <button class="btn-estoque"onclick="buscarNome()">
-      <span class="titulo">Busca</span>
-      <span class="descricao">Busque qualquer produto cadastrado pelo nome</span>
-    </button>
-
-    <button class="btn-estoque"onclick="removerUltimo()">
-      <span class="titulo">Remover último</span>
-      <span class="descricao">Remova o último produto cadastrado no estoque</span>
-    </button>
-
-    <button class="btn-estoque"onclick="removerTudo()">
-      <span class="titulo">Remover tudo</span>
-      <span class="descricao">Remova todos os produtos do estoque</span>
-    </button>
-    
-    <button class="btn-estoque"onclick="qtdProdutos()">
-      <span class="titulo">Quantidade de produtos</span>
-      <span class="descricao">Veja a quantidade de produtos no estoque</span>
-    </button>
-  </div>
+<div class="linhas">
+    <div class="linha linha1"></div>
+    <div class="linha linha2"></div>
 </div>
 
-<div class="descricao">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Recusandae corrupti pariatur rerum officia ex.
-    Exercitationem eius qui voluptatem,
-    acusamus quase amet eaque porro,
-    dignissimos modi excepturi dolorum enim cumque laudantium! ;D
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores 
-    ex commodi, doloremque, modi ab distinctio inventore aut dolor 
-    soluta laborum eaque accusamus recusandae? Quo impedit eos quae 
-    optio debitis veritatis.
-    </p>
-</div>
+  <aside class="interacao_ladoEsquerdo">
+    
+    <div class="botoes">
+      
+      <button class="btn-estoque" onclick="cadastrarProduto()">
+        <span class="titulo">Cadastro</span>
+        <span class="descricao">Cadastre um novo produto para venda</span>
+      </button>
+      
+      <button class="btn-estoque"onclick="DelporID()">
+        <span class="titulo">Remover produto</span>
+        <span class="descricao">Remova um produto cadastrado pelo ID</span>
+      </button>
+      
+      <button class="btn-estoque"onclick="mostrarProdutos()">
+        <span class="titulo">Listar</span>
+        <span class="descricao">Liste todos os produtos cadastrados</span>
+      </button>
+      
+      <button class="btn-estoque"onclick="buscarNome()">
+        <span class="titulo">Busca</span>
+        <span class="descricao">Busque qualquer produto cadastrado pelo nome</span>
+      </button>
+      
+      <button class="btn-estoque"onclick="removerUltimo()">
+        <span class="titulo">Remover último</span>
+        <span class="descricao">Remova o último produto cadastrado no estoque</span>
+      </button>
+      
+      <button class="btn-estoque"onclick="removerTudo()">
+        <span class="titulo">Remover tudo</span>
+        <span class="descricao">Remova todos os produtos do estoque</span>
+      </button>
+    
+      <button class="btn-estoque"onclick="qtdProdutos()">
+        <span class="titulo">Quantidade de produtos</span>
+        <span class="descricao">Veja a quantidade de produtos no estoque</span>
+      </button>
+    </div>
+  </aside>
+  
+    <main class="ladoDireito">
+      <div class="cabecalho_subtitulo">
+        <h1>Administração</h1>
+        <h3>gerencie seus produtos de forma mais fácil</h3>
+        <img src="./img/default-user.webp" alt="default user">
+      </div>
+      <div class="descricao1">
+      <p>
+        Gerencie seu estoque de forma simples e organizada.
+        Cadastre, consulte, pesquise e remova produtos com facilidade,
+        além de acompanhar a quantidade de itens cadastrados.
+        Todas as ferramentas necessárias para manter seu estoque
+        sob controle em um só lugar.
+      </p>
+    </div>
+  </main>
+  
 
+</div>
 
 </body>
 
