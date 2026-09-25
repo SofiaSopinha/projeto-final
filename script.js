@@ -82,8 +82,8 @@ function buscarMarca(){
     const marcaEncontrada = mercadoria.filter(produto => produto.marca.toLowerCase().trim() === marcaProcurada.toLowerCase().trim())
 
     if(marcaEncontrada.length > 0){
+        let produtos = `=== PRODUTOS ===\n`
         for (let i = 0; i < marcaEncontrada.length; i++) {
-            let produtos = `=== PRODUTOS ===\n`
             produtos = produtos + `id: ${marcaEncontrada[i].id}\n`
             produtos = produtos + `nome: ${marcaEncontrada[i].nome}\n` 
             produtos = produtos + `marca: ${marcaEncontrada[i].marca}\n`
@@ -106,6 +106,10 @@ function removerUltimo() {
 }
 
 function removerTudo(){
+    if(mercadoria.length == 0){
+        alert("Não há produtos para remover.")
+        return
+    }
     const confirmado = confirm("Você tem certeza de quer remover todos os produtos? Não é possível desfazer essa ação.")
 
     if(confirmado == true){
@@ -145,8 +149,8 @@ function editarProduto(){
             return
         }
 
-        mercadoria[Indexproduto].nome = novoNome
-        mercadoria[Indexproduto].marca = novaMarca
+        mercadoria[Indexproduto].nome = novoNome.trim()
+        mercadoria[Indexproduto].marca= novaMarca.trim()
         alert("Produto editado com sucesso!")
     }else{
         alert("Produto não encontrado")
